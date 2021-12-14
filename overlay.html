@@ -26,14 +26,44 @@
         }
 
 
+        .start-overlay.hidden,
         .overlay.hidden {
             opacity: 0;
-            
+
+        }
+
+
+        .start-overlay {
+            width: 0px;
+            height: 0px;
+            background: #FF3D00;
+            pointer-events: none;
+            transition: all .5s;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            border-radius: 100%;
+            border: 1px solid #FF3D00;
+        }
+
+        @keyframes overlay-anim {
+            0% {
+                width: 0px;
+                height: 0px;
+                opacity: .4;
+            }
+
+            100% {
+                width: 130vw;
+                height: 130vw;
+                opacity: 1;
+            }
         }
 
         .overlay {
-pointer-events: none;
-transition: all .5s;
+            pointer-events: none;
+            transition: all .5s;
             position: fixed;
             top: 50%;
             left: 50%;
@@ -42,12 +72,7 @@ transition: all .5s;
             height: 0px;
             border-radius: 100%;
             border: 100vw solid #FF3D00;
-            animation-duration: 3s;
-            animation-delay: 1.5s;
-            animation-name: prelouder-anim;
-            /* opacity: 0; */
-
-
+            opacity: 0;
         }
 
         @keyframes prelouder-anim {
@@ -123,13 +148,14 @@ transition: all .5s;
             margin-bottom: 32px;
         }
 
-
         .content__wrapper::-webkit-scrollbar {
             width: 0;
         }
     </style>
 
 
+    <div class="start-overlay">
+    </div>
     <div class="overlay">
 
     </div>
@@ -225,10 +251,25 @@ transition: all .5s;
     </div>
 
 
+
+    <style>
+        .start-overlay {
+            animation-duration: .5s;
+            animation-delay: 2s;
+            animation-name: overlay-anim;
+        }
+
+        .overlay {
+            animation-duration: 1s;
+            animation-delay: 2.5s;
+            animation-name: prelouder-anim;
+        }
+    </style>
+
     <script>
         setTimeout(() => {
             document.querySelector('.overlay').classList.add('hidden')
-        }, 3000)
+        }, 3500)
     </script>
 </body>
 
