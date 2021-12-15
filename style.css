@@ -204,27 +204,51 @@ body {
     opacity: 1;
     width: 120px;
     height: 120px;
-
-    animation-duration: 0.5s;
-    animation-name: hover-anim;
 }
 
-@keyframes hover-anim {
+
+ .content-start__tooltipe.leave {
+    animation-duration: 0.5s;
+    animation-name: hover-anim-leave;
+}
+
+
+ .content-start__tooltipe.enter {
+    animation-duration: 0.5s;
+    animation-name: hover-anim-enter;
+}
+
+@keyframes hover-anim-enter {
     0% {
         width: 40px;
         height: 40px;
         opacity: 0;
     }
+  
 
-    70% {
+    100% {
+        width: 120px;
+        height: 120px;
+        opacity: 1;
+    }
+}
+
+@keyframes hover-anim-leave {
+    0% {
+        width: 120px;
+        height: 120px;
+        opacity: 1;
+    }
+  
+    50% {
         width: 140px;
         height: 140px;
         opacity: 1;
     }
 
     100% {
-        width: 120px;
-        height: 120px;
-        opacity: 1;
+        width: 40px;
+        height: 40px;
+        opacity: 0;
     }
 }
