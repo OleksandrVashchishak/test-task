@@ -100,8 +100,15 @@
             <div class="content-start__item">
                 <img src="tile.png" alt="">
                 <div class="content-start__tooltipe">
-                    brand identity design
+                 
                 </div>
+                <span>
+                    brand 
+                    <br>
+                    identity
+                    <br>
+                    design
+                </span>
             </div>
         </div>
     </div>
@@ -249,14 +256,14 @@
 
 
         document.querySelector('.content-start__item').addEventListener('mouseenter', () => {
-            document.querySelector('.content-start__tooltipe').classList.add('enter')
-            document.querySelector('.content-start__tooltipe').classList.remove('leave')
+            document.querySelector('.content-start__item').classList.add('enter')
+            document.querySelector('.content-start__item').classList.remove('leave')
 
         })
 
         document.querySelector('.content-start__item').addEventListener('mouseleave', () => {
-            document.querySelector('.content-start__tooltipe').classList.remove('enter')
-            document.querySelector('.content-start__tooltipe').classList.add('leave')
+            document.querySelector('.content-start__item').classList.remove('enter')
+            document.querySelector('.content-start__item').classList.add('leave')
         })
 
     </script>

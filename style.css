@@ -186,11 +186,8 @@ body {
     background: #ff3d00;
     padding: 20px;
     box-sizing: border-box;
-    color: #fff;
-    font-weight: bold;
     text-transform: uppercase;
     display: flex;
-    font-size: 14px;
     justify-content: center;
     align-items: center;
     border-radius: 100%;
@@ -200,22 +197,40 @@ body {
     opacity: 0;
 }
 
+.content-start__item span {
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
 .content-start__item:hover .content-start__tooltipe {
     opacity: 1;
     width: 120px;
     height: 120px;
 }
 
-
- .content-start__tooltipe.leave {
-    animation-duration: 0.5s;
+.content-start__item.leave .content-start__tooltipe {
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in-out;
     animation-name: hover-anim-leave;
 }
 
-
- .content-start__tooltipe.enter {
-    animation-duration: 0.5s;
+.content-start__item.enter .content-start__tooltipe {
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.4s;
     animation-name: hover-anim-enter;
+}
+
+.content-start__item span {
+    opacity: 0;
+    transition: all 0.3s;
+}
+.content-start__item:hover span {
+    opacity: 1;
 }
 
 @keyframes hover-anim-enter {
@@ -224,7 +239,6 @@ body {
         height: 40px;
         opacity: 0;
     }
-  
 
     100% {
         width: 120px;
@@ -239,7 +253,7 @@ body {
         height: 120px;
         opacity: 1;
     }
-  
+
     50% {
         width: 140px;
         height: 140px;
