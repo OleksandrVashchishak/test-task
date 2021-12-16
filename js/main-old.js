@@ -32,13 +32,3 @@ document.querySelector('.close').addEventListener('click', () => {
 
 
 
-document.querySelector('.content-start__item').addEventListener('mouseenter', () => {
-    document.querySelector('.content-start__item').classList.add('enter')
-    document.querySelector('.content-start__item').classList.remove('leave')
-
-})
-
-document.querySelector('.content-start__item').addEventListener('mouseleave', () => {
-    document.querySelector('.content-start__item').classList.remove('enter')
-    document.querySelector('.content-start__item').classList.add('leave')
-})
