@@ -1,8 +1,8 @@
 @font-face {
-    font-family: 'Helvetica';
-    src: url('light.ttf'); /* IE9 Compat Modes */
-    src:  url('light.ttf')  format('truetype'), /* Safari, Android, iOS */
-  }
+    font-family: "Helvetica";
+    src: url("light.ttf"); /* IE9 Compat Modes */
+    src: url("light.ttf") format("truetype"); /* Safari, Android, iOS */
+}
 
 body {
     position: relative;
@@ -14,68 +14,6 @@ body {
 .start-overlay.hidden,
 .overlay.hidden {
     opacity: 0;
-}
-
-.start-overlay {
-    width: 0px;
-    height: 0px;
-    background: #ff3d00;
-    pointer-events: none;
-    transition: all 0.5s;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    border-radius: 100%;
-    border: 1px solid #ff3d00;
-    z-index: 2;
-}
-
-@keyframes overlay-anim {
-    0% {
-        width: 0px;
-        height: 0px;
-        opacity: 0.4;
-    }
-
-    100% {
-        width: 130vw;
-        height: 130vw;
-        opacity: 1;
-    }
-}
-
-.overlay {
-    pointer-events: none;
-    transition: all 0.5s;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    width: 0px;
-    height: 0px;
-    border-radius: 100%;
-    border: 100vw solid #ff3d00;
-    opacity: 0;
-    z-index: 3;
-}
-
-@keyframes prelouder-anim {
-    0% {
-        width: 0px;
-        height: 0px;
-        opacity: 1;
-    }
-
-    99% {
-        width: 130vw;
-        height: 130vw;
-        opacity: 0.5;
-    }
-
-    100% {
-        display: none;
-    }
 }
 
 body {
@@ -213,7 +151,7 @@ body {
     text-transform: uppercase;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
- font-family: Helvetica;
+    font-family: Helvetica;
     text-align: center;
 }
 
@@ -243,36 +181,45 @@ body {
     opacity: 1;
 }
 
-@keyframes hover-anim-enter {
-    0% {
-        width: 40px;
-        height: 40px;
-        opacity: 0;
-    }
-
-    100% {
-        width: 120px;
-        height: 120px;
-        opacity: 1;
-    }
+.start-overlay.active {
+    animation-duration: 0.5s;
+    animation-name: overlay-anim;
 }
 
-@keyframes hover-anim-leave {
-    0% {
-        width: 120px;
-        height: 120px;
-        opacity: 1;
-    }
+.overlay.active {
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-name: prelouder-anim;
+}
 
-    50% {
-        width: 140px;
-        height: 140px;
-        opacity: 1;
-    }
 
-    100% {
-        width: 40px;
-        height: 40px;
-        opacity: 0;
-    }
+.start-overlay {
+    width: 0px;
+    height: 0px;
+    background: #ff3d00;
+    pointer-events: none;
+    transition: all 0.5s;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 100%;
+    border: 1px solid #ff3d00;
+    z-index: 2;
+}
+
+
+.overlay {
+    pointer-events: none;
+    transition: all 0.5s;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 0px;
+    height: 0px;
+    border-radius: 100%;
+    border: 100vw solid #ff3d00;
+    opacity: 0;
+    z-index: 3;
 }
