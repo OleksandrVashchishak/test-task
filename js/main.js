@@ -1,4 +1,7 @@
 if (document.querySelector('.portfolio__item')) {
+
+    const burgerOpen = document.querySelector('.header__burger-open')
+    const burgerClose = document.querySelector('.header__burger-close')
     const portfolio = document.querySelector('.portfolio')
     const portfolioItems = document.querySelectorAll('.portfolio__item')
     const startOverlay = document.querySelector('.start-overlay-circle')
@@ -22,22 +25,30 @@ if (document.querySelector('.portfolio__item')) {
             startOverlay.classList.add('active')
             html.style.overflow = 'hidden'
             setTimeout(() => {
-                portfolio.classList.add('hidden')
-                body.classList.add('black')
-                project.classList.add('active')
+                toggleProject()
             }, 500)
+
             setTimeout(() => {
-                overlay.classList.add('hidden')
-            }, 2500)
-            setTimeout(() => {
-                overlay.classList.remove('hidden')
                 overlay.classList.remove('active')
-            startOverlay.classList.remove('active')
+                startOverlay.classList.remove('active')
             }, 2600)
         })
     })
+
+    burgerClose.addEventListener('click', () => {
+        if (project.classList.contains('active')) {
+            toggleProject()
+            html.style.overflow = 'initial'
+        }
+    })
+
+
+    const toggleProject = () => {
+        portfolio.classList.toggle('hidden')
+        body.classList.toggle('black')
+        project.classList.toggle('active')
+        burgerOpen.classList.toggle('active')
+        burgerClose.classList.toggle('active')
+    }
+
 }
-
-
-
-

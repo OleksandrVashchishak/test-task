@@ -223,20 +223,29 @@
     z-index: 3;
 }
 
+.overlay-close,
 .overlay-circle {
-    box-sizing: content-box;
     pointer-events: none;
     transition: all 0.5s;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    width: 0px;
-    height: 0px;
     border-radius: 100%;
-    border: 100vw solid #ff3d00;
     opacity: 0;
     z-index: 4;
+}
+
+.overlay-circle {
+    box-sizing: content-box;
+    width: 0px;
+    height: 0px;
+    border: 100vw solid #ff3d00;
+}
+
+.overlay-close {
+    width: 130vw;
+    height: 130vw;
 }
 
 .start-overlay-circle.hidden,
