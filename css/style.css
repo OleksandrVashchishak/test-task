@@ -201,7 +201,7 @@
     text-align: center;
     opacity: 0;
     transition: all 0.25s;
-    z-index: 10;
+    z-index: 2;
 }
 
 .portfolio__item:hover .portfolio__tooltipe-text {
@@ -243,11 +243,6 @@
     border: 100vw solid #ff3d00;
 }
 
-.overlay-close {
-    width: 130vw;
-    height: 130vw;
-}
-
 .start-overlay-circle.hidden,
 .overlay-circle.hidden {
     opacity: 0;
@@ -258,10 +253,21 @@
     animation-name: overlay-anim;
 }
 
+.overlay-close {
+    width: 0vw;
+    height: 0vw;
+    background: #ff3d00;
+}
+
+.overlay-close.active {
+    animation-duration: 0.5s;
+    animation-name: overlay-close-anim;
+}
+
 .overlay-circle.active {
     animation-duration: 1s;
     animation-delay: 0.5s;
-    animation-name: prelouder-anim;
+    animation-name: prelouder-overlay-anim;
 }
 
 body.black .header,
@@ -281,6 +287,7 @@ body.black .header__logo path {
 .project {
     padding-top: 170px;
     display: none;
+    position: fixed;
 }
 
 .portfolio.hidden {
@@ -311,4 +318,172 @@ body.black .header__logo path {
     width: 100%;
     height: 470px;
     object-fit: cover;
+}
+
+.prelouder__wrapper {
+    background: #ff3d00;
+    width: 200vw;
+    height: 200vh;
+    position: relative;
+    transition: all 0.5s;
+    animation-duration: 3s;
+    animation-delay: 1.2s;
+    animation-name: prelouder-wrapper-anim;
+    animation-fill-mode: forwards;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.prelouder__logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    transition: all 0.5s;
+    animation-duration: 2s;
+    animation-name: prelouder-anim;
+    animation-timing-function: linear;
+    opacity: 0;
+    z-index: 11;
+}
+
+.about {
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 4;
+    transition: all 0.5s;
+}
+
+.about.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.about__wrapper {
+    padding-top: 190px;
+    position: relative;
+    z-index: 1;
+}
+
+.about__img-wrapper {
+    position: absolute;
+    bottom: -4px;
+    right: 0;
+}
+
+.about__img-wrapper-side {
+    position: absolute;
+    bottom: 0;
+    width: 33vw;
+    height: 33vw;
+    left: -20vw;
+    bottom: -15vh;
+    border-radius: 100%;
+}
+
+.about__img-wrapper-side:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 33vw;
+    height: 33vw;
+    background: rgba(255, 61, 0, 0.42);
+    border-radius: 100%;
+    transition: all 0.4s;
+    opacity: 0;
+}
+
+.about__img-wrapper-side.active:before {
+    opacity: 1;
+}
+
+.about__img-wrapper-side img {
+    width: 100%;
+    border-radius: 100%;
+}
+
+.about__bg {
+    background: #000;
+    width: 10vw;
+    height: 10vw;
+    position: fixed;
+    top: -10vw;
+    right: -10vw;
+    z-index: 3;
+    border-radius: 100%;
+}
+
+.about__bg.active {
+    animation-duration: 2s;
+    animation-name: about-bg-anim;
+    animation-fill-mode: forwards;
+}
+
+.about__bg.active-reverse {
+    animation-duration: 1s;
+    animation-name: about-bg-anim-reverse;
+    animation-fill-mode: forwards;
+}
+
+.about__text,
+.about__title {
+    color: #ffffff;
+    max-width: 750px;
+    height: 0px;
+    overflow: hidden;
+    transform: translateY(-60px);
+    transition: height 0.5s, transform 0.5s;
+}
+
+.about__text.active,
+.about__title.active {
+    transform: translateY(0px);
+}
+
+.about__text {
+    font-size: 26px;
+    line-height: 36px;
+    font-weight: 400;
+}
+.about__title {
+    margin: 0;
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 58px;
+    line-height: 60px;
+}
+
+.body-about .header__social,
+.body-about .header__contact a {
+    color: #fff;
+}
+
+.body-about .header {
+    z-index: 5;
+    background: transparent;
+}
+
+.body-about .header__logo path {
+    transition: all 0.5s;
+    fill: #fff;
+}
+
+.portfolio__container {
+    transition: transform 0.9s;
+}
+
+.body-about .portfolio__container {
+    transform: translateY(30vh);
 }
