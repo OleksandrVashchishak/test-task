@@ -161,14 +161,10 @@ if (document.querySelector('.portfolio__item')) {
         }, 400)
     }
 
-
     const getHeightProject = () => {
         const wrapperActive = document.querySelector('.project__wrapper')
         projectAreaLeft.style.height = wrapperActive.scrollHeight + 'px'
         projectAreaRight.style.height = wrapperActive.scrollHeight + 'px'
     }
-
-
-
     // -- end change project  -- //
 }
