@@ -1,10 +1,10 @@
 @media (max-width: 1620px) {
     .project {
-        padding-top: 120px;
+        padding-top: 130px;
     }
 
     .project__wrapper {
-        margin-top: 20px;
+        margin-top: 10px;
     }
 
     .project__wrapper,

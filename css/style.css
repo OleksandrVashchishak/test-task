@@ -552,7 +552,7 @@ font-family: NeueHaasUnicaW06;
 }
 
 .project {
-    padding-top: 140px;
+    padding-top: 150px;
     display: none;
     position: fixed;
     left: 50%;
@@ -568,7 +568,7 @@ font-family: NeueHaasUnicaW06;
 }
 
 .project__wrapper {
-    margin-top: 25px;
+    margin-top: 15px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
