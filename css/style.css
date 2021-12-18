@@ -21,20 +21,12 @@ body {
     overflow-x: hidden;
 }
 
-
 .prelouder__logo {
     animation-duration: 2s;
     animation-name: prelouder-anim;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
 }
-
-
-
-
-
-
-
 
 body.load-content .prelouder__wrapper {
     animation-duration: 4s;
@@ -386,6 +378,7 @@ body.black .header__logo path {
     transition: all 0.5s;
     opacity: 0;
     z-index: 11;
+    pointer-events: none;
 }
 
 .about {
