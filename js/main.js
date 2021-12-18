@@ -29,7 +29,6 @@ if (document.querySelector('.portfolio__item')) {
     const aboutImg = document.querySelector('.about__img-wrapper-side')
 
   // ---- FUNCTIONS ---- //
-let t  = 1
     portfolioItems.forEach(item => {
         item.addEventListener('mouseenter', () => {
             item.classList.add('enter')

@@ -349,6 +349,61 @@ body.black .header__logo path {
     z-index: 11;
 }
 
+.portfolio__column {
+    animation-delay: 1.3s;
+    animation-duration: 2s;
+}
+
+.portfolio__column:nth-child(1) {
+    animation-name: column-anim-1;
+}
+.portfolio__column:nth-child(2) {
+    animation-name: column-anim-2;
+}
+.portfolio__column:nth-child(3) {
+    animation-name: column-anim-3;
+}
+.portfolio__column:nth-child(4) {
+    animation-name: column-anim-4;
+}
+
+@keyframes column-anim-1 {
+    0% {
+        transform: translateY(80vh);
+    }
+
+    100% {
+        transform: translateY(0vh);
+    }
+}
+@keyframes column-anim-2 {
+    0% {
+        transform: translateY(100vh);
+    }
+
+    100% {
+        transform: translateY(0vh);
+    }
+}
+@keyframes column-anim-3 {
+    0% {
+        transform: translateY(80vh);
+    }
+
+    100% {
+        transform: translateY(0vh);
+    }
+}
+@keyframes column-anim-4 {
+    0% {
+        transform: translateY(90vh);
+    }
+
+    100% {
+        transform: translateY(0vh);
+    }
+}
+
 .about {
     position: fixed;
     height: 100vh;
