@@ -33,6 +33,7 @@ if (document.querySelector('.portfolio__item')) {
     // ---- FUNCTIONS ---- //
 
     window.addEventListener("load", () => {
+        const preloaderLogo = document.querySelector('.prelouder__logo')
         const loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
         try {
             if (loadTime > 1000) {
@@ -40,9 +41,21 @@ if (document.querySelector('.portfolio__item')) {
             } else {
                 body.classList.add('load-content')
             }
+
+            if (loadTime > 1500) {
+                preloaderLogo.classList.add('active')
+            } else {
+                setTimeout(() => {
+                    preloaderLogo.classList.add('active')
+                }, 1600 - loadTime);
+            }
+
         } catch {
             body.classList.add('load-content')
         }
+
+
+
     });
 
     // -- start portfolio -- //

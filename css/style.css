@@ -22,8 +22,16 @@ body {
 }
 
 .prelouder__logo {
-    animation-duration: 2s;
+    pointer-events: none;
+    animation-duration: 1.5s;
     animation-name: prelouder-anim;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+.prelouder__logo.active  {
+    pointer-events: none;
+    animation-duration: 0.5s;
+    animation-name: prelouder-anim-n;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
 }
@@ -52,13 +60,13 @@ body.load-content-late .prelouder__wrapper {
 }
 
 body.load-content-late .header {
-    animation-delay: .5s;
+    animation-delay: 0.5s;
     animation-duration: 2s;
     animation-name: header-prelouder;
 }
 
 body.load-content-late .portfolio__column {
-    animation-delay: .5s;
+    animation-delay: 0.5s;
     animation-duration: 2s;
 }
 
@@ -378,7 +386,6 @@ body.black .header__logo path {
     transition: all 0.5s;
     opacity: 0;
     z-index: 11;
-    pointer-events: none;
 }
 
 .about {
