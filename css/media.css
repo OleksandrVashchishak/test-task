@@ -12,3 +12,9 @@
         height: calc(100vh - 190px);
     }
 }
+
+@media (max-width: 1460px) {
+    .about__img-wrapper {
+        max-width: 50vw;
+    }
+}

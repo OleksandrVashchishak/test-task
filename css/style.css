@@ -1,3 +1,12 @@
+@font-face {
+    font-family: "NeueHaasUnicaW06";
+    font-weight: 400;
+    font-style: normal;
+    src: url("../fonts/neue-haas-unica/neue-haas-unica-ight.ttf"),
+        url("../fonts/neue-haas-unica/neue-haas-unica-ight.woff2") format("woff2"),
+        url("../fonts/neue-haas-unica/neue-haas-unica-ight.ttf") format("truetype");
+} 
+
 * {
     box-sizing: border-box;
     font-family: sans-serif;
@@ -385,6 +394,14 @@ body.black .header__logo path {
     position: absolute;
     bottom: -4px;
     right: 0;
+    max-height: calc(100vh - 80px);
+    max-width: 60vw;
+}
+
+.about__img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
 }
 
 .about__img-wrapper-side {
@@ -459,10 +476,13 @@ body.black .header__logo path {
     transform: translateY(0px);
 }
 
+.about__text p,
 .about__text {
     font-size: 26px;
     line-height: 36px;
     font-weight: 400;
+font-family: NeueHaasUnicaW06;
+
 }
 .about__title {
     margin: 0;
