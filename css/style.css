@@ -5,7 +5,7 @@
     src: url("../fonts/neue-haas-unica/neue-haas-unica-ight.ttf"),
         url("../fonts/neue-haas-unica/neue-haas-unica-ight.woff2") format("woff2"),
         url("../fonts/neue-haas-unica/neue-haas-unica-ight.ttf") format("truetype");
-} 
+}
 
 * {
     box-sizing: border-box;
@@ -26,11 +26,6 @@ html {
     padding-right: 80px;
 }
 
-
-html {
-    /* cursor: url("../img/cursor.svg"), pointer !important */
-}
-
 .header {
     height: 80px;
     width: 100%;
@@ -42,7 +37,7 @@ html {
     top: 0;
 }
 .header__container {
-    align-items: center;
+    align-items: flex-start;
     display: flex;
     justify-content: space-between;
 }
@@ -357,9 +352,6 @@ body.black .header__logo path {
     animation-name: header-prelouder;
 }
 
-
-
-
 .portfolio__column {
     animation-delay: 1.5s;
     animation-duration: 2s;
@@ -496,8 +488,7 @@ body.black .header__logo path {
     font-size: 26px;
     line-height: 36px;
     font-weight: 400;
-font-family: NeueHaasUnicaW06;
-
+    font-family: NeueHaasUnicaW06;
 }
 .about__title {
     margin: 0;
@@ -586,32 +577,8 @@ font-family: NeueHaasUnicaW06;
     flex-wrap: wrap;
 }
 
-.project__wrapper,
-.project__arrow-area {
+.project__wrapper {
     height: calc(100vh - 235px);
-}
-
-.project__arrow-area {
-    position: fixed;
-    z-index: 4;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: transparent;
-    width: 100px;
-}
-
-.project__arrow-area-left {
-    left: 80px;
-}
-
-.project__arrow-area-right {
-    right: 80px;
-}
-.project__arrow.active,
-.project__arrow:hover {
-    opacity: 1;
 }
 
 .project__title,
@@ -624,28 +591,25 @@ font-family: NeueHaasUnicaW06;
     opacity: 0;
 }
 
-.project__arrow {
-    width: 100px;
-    height: 100px;
+.project__arrow-area {
+    position: absolute;
+    z-index: 4;
+    bottom: 0;
+    top: 0;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
-    transition: all 0.3s;
-    opacity: 0;
-    position: absolute;
-    transition: all 0.2s;
-    transform: translateX(-50%) translateY(-50%);
-}
-.project__arrow svg {
-    width: 100%;
-    height: 100%;
+    background: transparent;
+    width: 50%;
 }
 
-.project__arrow svg path {
-    transition: all 0.3s;
+.project__arrow-area-left {
+    left: 0px;
+    cursor: url("../img/cursors/arrow-cursor-left.svg"), pointer;
 }
 
-.project__arrow:hover svg path {
-    fill: #c4c4c4;
+.project__arrow-area-right {
+    right: 0px;
+    cursor: url("../img/cursors/arrow-cursor-right.svg"), pointer;
 }

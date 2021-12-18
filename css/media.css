@@ -7,8 +7,7 @@
         margin-top: 10px;
     }
 
-    .project__wrapper,
-    .project__arrow-area {
+    .project__wrapper {
         height: calc(100vh - 210px);
     }
 }

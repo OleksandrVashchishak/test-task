@@ -15,8 +15,6 @@ if (document.querySelector('.portfolio__item')) {
 
     // -- project -- //
     const project = document.querySelector('.project')
-    const projectArrowLeft = document.querySelector('.project__arrow-left')
-    const projectArrowRight = document.querySelector('.project__arrow-right')
     const projectAreaLeft = document.querySelector('.project__arrow-area-left')
     const projectAreaRight = document.querySelector('.project__arrow-area-right')
 
@@ -68,10 +66,10 @@ if (document.querySelector('.portfolio__item')) {
         project.classList.toggle('active')
         burgerOpen.classList.toggle('active')
         burgerClose.classList.toggle('active')
+        getHeightProject()
     }
 
     // -- start about functions -- //
-
     burgerOpen.addEventListener('click', () => {
         aboutOpen()
         burgerToggle()
@@ -102,11 +100,9 @@ if (document.querySelector('.portfolio__item')) {
             aboutImg.classList.toggle('active')
         }, 1100)
     }
-
     // -- end about functions -- //
 
     // -- start burger close -- //
-
     burgerClose.addEventListener('click', () => {
         if (project.classList.contains('active')) {
             setTimeout(() => {
@@ -140,13 +136,11 @@ if (document.querySelector('.portfolio__item')) {
     // -- end burger close -- //
 
     // -- start change project  -- //
+    projectAreaLeft.addEventListener('click', () => changeProject())
+    projectAreaRight.addEventListener('click', () => changeProject())
 
-    projectArrowLeft.addEventListener('click', () => changeProject('prev'))
-    projectArrowRight.addEventListener('click', () => changeProject('next'))
-
-    const changeProject = (direct) => {
+    const changeProject = () => {
         project.classList.add('project-change')
-
         setTimeout(() => {
             if (document.querySelector('.project__title').textContent == 'Digital pathology Lab - Rebranding') {
                 document.querySelector('.project__title').textContent = 'American Hospital tbilisi'
@@ -159,28 +153,22 @@ if (document.querySelector('.portfolio__item')) {
                     e.setAttribute('src', 'img/project/project-2.jpg');
                 })
             }
+            getHeightProject()
         }, 300)
-
+        getHeightProject()
         setTimeout(() => {
             project.classList.remove('project-change')
         }, 400)
     }
 
-    // -- end change project  -- //
 
-    // -- start move project arrow -- //
-    projectAreaLeft.addEventListener('mouseenter', () => projectArrowLeft.classList.add('active'))
-    projectAreaLeft.addEventListener('mouseleave', () => projectArrowLeft.classList.remove('active'))
-    projectAreaRight.addEventListener('mouseenter', () => projectArrowRight.classList.add('active'))
-    projectAreaRight.addEventListener('mouseleave', () => projectArrowRight.classList.remove('active'))
-
-    projectAreaLeft.addEventListener('mousemove', (e) => moveProjectArrow(projectArrowLeft, e))
-    projectAreaRight.addEventListener('mousemove', (e) => moveProjectArrow(projectArrowRight, e))
-
-    const moveProjectArrow = (arrow, e) => {
-        arrow.style.left = e.pageX + "px";
-        arrow.style.top = e.pageY + "px";
+    const getHeightProject = () => {
+        const wrapperActive = document.querySelector('.project__wrapper')
+        projectAreaLeft.style.height = wrapperActive.scrollHeight + 'px'
+        projectAreaRight.style.height = wrapperActive.scrollHeight + 'px'
     }
-    // -- end move project arrow -- //
 
+
+
+    // -- end change project  -- //
 }
