@@ -29,7 +29,7 @@ if (document.querySelector('.portfolio__item')) {
     const aboutImg = document.querySelector('.about__img-wrapper-side')
 
   // ---- FUNCTIONS ---- //
-
+let t  = 1
     portfolioItems.forEach(item => {
         item.addEventListener('mouseenter', () => {
             item.classList.add('enter')
@@ -39,7 +39,10 @@ if (document.querySelector('.portfolio__item')) {
         item.addEventListener('mouseleave', () => {
             item.classList.remove('enter')
             item.classList.add('leave')
-        })
+            setTimeout(() => {
+                item.classList.remove('leave')
+            }, 400)
+        }) 
 
         item.addEventListener('click', () => {
             overlay.classList.add('active')
@@ -123,7 +126,6 @@ if (document.querySelector('.portfolio__item')) {
                 aboutBg.classList.remove('active-reverse')
             }, 500)
         }
-
 
     })
 
