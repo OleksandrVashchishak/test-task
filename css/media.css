@@ -1,6 +1,6 @@
 @media (max-width: 1620px) {
     .project {
-        padding-top: 130px;
+        padding-top: 150px;
     }
 
     .project__wrapper {
@@ -9,7 +9,7 @@
 
     .project__wrapper,
     .project__arrow-area {
-        height: calc(100vh - 190px);
+        height: calc(100vh - 210px);
     }
 }
 

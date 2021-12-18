@@ -26,6 +26,11 @@ html {
     padding-right: 80px;
 }
 
+
+html {
+    /* cursor: url("../img/cursor.svg"), pointer !important */
+}
+
 .header {
     height: 80px;
     width: 100%;
@@ -346,6 +351,14 @@ body.black .header__logo path {
     opacity: 0;
     z-index: 11;
 }
+.header {
+    animation-delay: 1.5s;
+    animation-duration: 2s;
+    animation-name: header-prelouder;
+}
+
+
+
 
 .portfolio__column {
     animation-delay: 1.5s;
@@ -551,7 +564,7 @@ font-family: NeueHaasUnicaW06;
 }
 
 .project {
-    padding-top: 150px;
+    padding-top: 170px;
     display: none;
     position: fixed;
     left: 50%;
@@ -575,7 +588,7 @@ font-family: NeueHaasUnicaW06;
 
 .project__wrapper,
 .project__arrow-area {
-    height: calc(100vh - 215px);
+    height: calc(100vh - 235px);
 }
 
 .project__arrow-area {
