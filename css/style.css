@@ -21,6 +21,11 @@ body {
     overflow-x: hidden;
 }
 
+.prelouder {
+    position: absolute;
+    overflow: hidden;
+}
+
 .prelouder__logo {
     pointer-events: none;
     animation-duration: 1.5s;
@@ -388,7 +393,7 @@ body.black .header__logo path {
 }
 
 .prelouder__logo {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
@@ -429,8 +434,6 @@ body.black .header__logo path {
     top: 100px;
     transition: all 0.9s;
 }
-
-
 
 .about__img {
     max-height: 100%;
@@ -514,7 +517,7 @@ body.black .header__logo path {
     opacity: 0;
     overflow: hidden;
     transform: translateY(-60px);
-    transition: height .5s, transform .5s, opacity .9s;
+    transition: height 0.5s, transform 0.5s, opacity 0.9s;
 }
 
 .about__text.active,
