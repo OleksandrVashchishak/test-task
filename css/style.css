@@ -33,7 +33,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 3;
+    z-index: 5;
     top: 0;
 }
 .header__container {
@@ -215,7 +215,7 @@ html {
     transform: translateX(-50%) translateY(-50%);
     border-radius: 100%;
     border: 1px solid #ff3d00;
-    z-index: 3;
+    z-index: 5;
 }
 
 .overlay-close,
@@ -228,7 +228,7 @@ html {
     transform: translateX(-50%) translateY(-50%);
     border-radius: 100%;
     opacity: 0;
-    z-index: 4;
+    z-index: 6;
 }
 
 .overlay-circle {
@@ -486,13 +486,11 @@ body.black .header__logo path {
     color: #fff;
 }
 
-.body-about .header {
-    z-index: 5;
-    background: transparent;
+.header__logo path {
+    transition: all .5s;
 }
 
 .body-about .header__logo path {
-    transition: all 0.5s;
     fill: #fff;
 }
 
