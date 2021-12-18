@@ -17,6 +17,8 @@ if (document.querySelector('.portfolio__item')) {
     const project = document.querySelector('.project')
     const projectArrowLeft = document.querySelector('.project__arrow-left')
     const projectArrowRight = document.querySelector('.project__arrow-right')
+    const projectAreaLeft = document.querySelector('.project__arrow-area-left')
+    const projectAreaRight = document.querySelector('.project__arrow-area-right')
 
     // -- overlay -- //
     const overlay = document.querySelector('.overlay-circle')
@@ -68,6 +70,8 @@ if (document.querySelector('.portfolio__item')) {
         burgerClose.classList.toggle('active')
     }
 
+    // -- start about functions -- //
+
     burgerOpen.addEventListener('click', () => {
         aboutOpen()
         burgerToggle()
@@ -99,6 +103,10 @@ if (document.querySelector('.portfolio__item')) {
         }, 1100)
     }
 
+    // -- end about functions -- //
+
+    // -- start burger close -- //
+
     burgerClose.addEventListener('click', () => {
         if (project.classList.contains('active')) {
             setTimeout(() => {
@@ -129,7 +137,9 @@ if (document.querySelector('.portfolio__item')) {
         }
 
     })
+    // -- end burger close -- //
 
+    // -- start change project  -- //
 
     projectArrowLeft.addEventListener('click', () => changeProject('prev'))
     projectArrowRight.addEventListener('click', () => changeProject('next'))
@@ -155,5 +165,22 @@ if (document.querySelector('.portfolio__item')) {
             project.classList.remove('project-change')
         }, 400)
     }
+
+    // -- end change project  -- //
+
+    // -- start move project arrow -- //
+    projectAreaLeft.addEventListener('mouseenter', () => projectArrowLeft.classList.add('active'))
+    projectAreaLeft.addEventListener('mouseleave', () => projectArrowLeft.classList.remove('active'))
+    projectAreaRight.addEventListener('mouseenter', () => projectArrowRight.classList.add('active'))
+    projectAreaRight.addEventListener('mouseleave', () => projectArrowRight.classList.remove('active'))
+
+    projectAreaLeft.addEventListener('mousemove', (e) => moveProjectArrow(projectArrowLeft, e))
+    projectAreaRight.addEventListener('mousemove', (e) => moveProjectArrow(projectArrowRight, e))
+
+    const moveProjectArrow = (arrow, e) => {
+        arrow.style.left = e.pageX + "px";
+        arrow.style.top = e.pageY + "px";
+    }
+    // -- end move project arrow -- //
 
 }
