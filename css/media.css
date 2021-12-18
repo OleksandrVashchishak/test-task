@@ -1,0 +1,15 @@
+@media (max-width: 1620px) {
+    .project {
+        padding-top: 140px;
+    }
+
+    
+.project__wrapper,
+.project__arrow-area {
+    height: calc(100vh - 225px);
+}
+
+    .project__wrapper {
+        margin-top: 25px;
+    }
+}

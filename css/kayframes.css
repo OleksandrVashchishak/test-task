@@ -1,37 +1,46 @@
-@keyframes hover-anim-enter {
+/* // -- prelouder --// */
+
+@keyframes prelouder-wrapper-anim {
     0% {
-        width: 40px;
-        height: 40px;
-        opacity: 0;
+        width: 200vw;
+        height: 200vw;
+        border-radius: 100% 0 100% 100%;
+        top: 0;
+        right: 0;
     }
 
     100% {
-        width: 120px;
-        height: 120px;
-        opacity: 1;
+        top: -100vw;
+        right: -100vw;
+        width: 0vw;
+        height: 0vw;
+        border-radius: 100% 0 100% 100%;
     }
 }
 
-@keyframes hover-anim-leave {
+@keyframes prelouder-anim {
     0% {
-        width: 120px;
-        height: 120px;
+        transform: translateX(-50%) translateY(calc(-50% + 100px)) scale(1);
+        opacity: 0;
+    }
+
+    40% {
+        transform: translateX(-50%) translateY(-50%) scale(1);
         opacity: 1;
     }
 
-    50% {
-        width: 140px;
-        height: 140px;
+    60% {
+        transform: translateX(-50%) translateY(-50%) scale(1);
         opacity: 1;
     }
 
     100% {
-        width: 40px;
-        height: 40px;
+        transform: translateX(-50%) translateY(-50%) scale(7);
         opacity: 0;
     }
 }
 
+/* // -- overlay -- // */
 @keyframes overlay-anim {
     0% {
         width: 0px;
@@ -78,45 +87,43 @@
     }
 }
 
-@keyframes prelouder-wrapper-anim {
-    0% {
-        width: 200%;
-        height: 200%;
-        border-radius: 0 0 0 0;
-        top: 0;
-        right: 0;
-    }
+/* // -- hover tail -- // */
 
-    100% {
-        top: -100%;
-        right: -100%;
-        width: 50%;
-        height: 50%;
-        border-radius: 100% 0 100% 100%;
-    }
-}
-
-@keyframes prelouder-anim {
+@keyframes hover-anim-enter {
     0% {
-        transform: translateX(-50%) translateY(calc(-50% + 100px)) scale(1);
+        width: 40px;
+        height: 40px;
         opacity: 0;
     }
 
-    40% {
-        transform: translateX(-50%) translateY(-50%) scale(1);
+    100% {
+        width: 120px;
+        height: 120px;
+        opacity: 1;
+    }
+}
+
+@keyframes hover-anim-leave {
+    0% {
+        width: 120px;
+        height: 120px;
         opacity: 1;
     }
 
-    60% {
-        transform: translateX(-50%) translateY(-50%) scale(1);
+    50% {
+        width: 140px;
+        height: 140px;
         opacity: 1;
     }
 
     100% {
-        transform: translateX(-50%) translateY(-50%) scale(7);
+        width: 40px;
+        height: 40px;
         opacity: 0;
     }
 }
+
+/* // -- about -- // */
 
 @keyframes about-bg-anim {
     0% {
@@ -141,5 +148,58 @@
     100% {
         width: 0;
         height: 0;
+    }
+}
+
+/* // -- portfolio column -- // */
+
+@keyframes column-anim-1 {
+    0% {
+        transform: translateY(80vh);
+    }
+
+    100% {
+        transform: translateY(0vh);
+    }
+}
+
+@keyframes column-anim-2 {
+    0% {
+        transform: translateY(100vh);
+    }
+
+    100% {
+        transform: translateY(0vh);
+    }
+}
+
+@keyframes column-anim-3 {
+    0% {
+        transform: translateY(80vh);
+    }
+
+    100% {
+        transform: translateY(0vh);
+    }
+}
+
+@keyframes column-anim-4 {
+    0% {
+        transform: translateY(90vh);
+    }
+
+    100% {
+        transform: translateY(0vh);
+    }
+}
+
+/* // -- footer -- // */
+
+@keyframes footer-arrow-anim {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-20px);
     }
 }

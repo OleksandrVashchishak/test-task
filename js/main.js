@@ -15,6 +15,8 @@ if (document.querySelector('.portfolio__item')) {
 
     // -- project -- //
     const project = document.querySelector('.project')
+    const projectArrowLeft = document.querySelector('.project__arrow-left')
+    const projectArrowRight = document.querySelector('.project__arrow-right')
 
     // -- overlay -- //
     const overlay = document.querySelector('.overlay-circle')
@@ -28,7 +30,7 @@ if (document.querySelector('.portfolio__item')) {
     const aboutText = document.querySelector('.about__text')
     const aboutImg = document.querySelector('.about__img-wrapper-side')
 
-  // ---- FUNCTIONS ---- //
+    // ---- FUNCTIONS ---- //
     portfolioItems.forEach(item => {
         item.addEventListener('mouseenter', () => {
             item.classList.add('enter')
@@ -41,7 +43,7 @@ if (document.querySelector('.portfolio__item')) {
             setTimeout(() => {
                 item.classList.remove('leave')
             }, 400)
-        }) 
+        })
 
         item.addEventListener('click', () => {
             overlay.classList.add('active')
@@ -127,5 +129,31 @@ if (document.querySelector('.portfolio__item')) {
         }
 
     })
+
+
+    projectArrowLeft.addEventListener('click', () => changeProject('prev'))
+    projectArrowRight.addEventListener('click', () => changeProject('next'))
+
+    const changeProject = (direct) => {
+        project.classList.add('project-change')
+
+        setTimeout(() => {
+            if (document.querySelector('.project__title').textContent == 'Digital pathology Lab - Rebranding') {
+                document.querySelector('.project__title').textContent = 'American Hospital tbilisi'
+                document.querySelectorAll('.project__item img').forEach(e => {
+                    e.setAttribute('src', 'img/project/project-1.jpg');
+                })
+            } else {
+                document.querySelector('.project__title').textContent = 'Digital pathology Lab - Rebranding'
+                document.querySelectorAll('.project__item img').forEach(e => {
+                    e.setAttribute('src', 'img/project/project-2.jpg');
+                })
+            }
+        }, 300)
+
+        setTimeout(() => {
+            project.classList.remove('project-change')
+        }, 400)
+    }
 
 }
