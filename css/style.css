@@ -394,14 +394,17 @@ body.black .header__logo path {
     position: absolute;
     bottom: -4px;
     right: 0;
-    max-height: calc(100vh - 80px);
+    max-height: calc(100vh - 100px);
     max-width: 60vw;
+    top: 100px;
 }
 
 .about__img {
     max-height: 100%;
     max-width: 100%;
     object-fit: contain;
+    object-position: bottom;
+    height: 100%;
 }
 
 .about__img-wrapper-side {
@@ -464,7 +467,7 @@ body.black .header__logo path {
 .about__text,
 .about__title {
     color: #ffffff;
-    max-width: 750px;
+    max-width: 790px;
     height: 0px;
     overflow: hidden;
     transform: translateY(-60px);
