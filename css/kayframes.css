@@ -1,5 +1,4 @@
 /* // -- prelouder --// */
-
 @keyframes prelouder-wrapper-anim {
     0% {
         width: 200vw;
@@ -87,10 +86,7 @@
     }
 }
 
-
-
 /* // -- about -- // */
-
 @keyframes about-bg-anim {
     0% {
         width: 10vw;
@@ -118,7 +114,6 @@
 }
 
 /* // -- portfolio column -- // */
-
 @keyframes column-anim-1 {
     0% {
         transform: translateY(80vh);
@@ -160,7 +155,6 @@
 }
 
 /* // -- footer -- // */
-
 @keyframes footer-arrow-anim {
     0% {
         transform: translateY(0);
@@ -169,7 +163,6 @@
         transform: translateY(-20px);
     }
 }
-
 
 /* // -- header -- // */
 @keyframes header-prelouder {
