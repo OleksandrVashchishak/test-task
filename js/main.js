@@ -1,3 +1,12 @@
+if (document.querySelector('.portfolio__item img')) {
+    const imagesParalax = document.querySelectorAll('.portfolio__item img');
+    new simpleParallax(imagesParalax, {
+        delay: 1.5,
+        transition: 'cubic-bezier(0,0,0,1)',
+        overflow: true
+    });
+}
+
 if (document.querySelector('.portfolio__item')) {
 
     // ---- VARIABLES ---- //
@@ -15,6 +24,8 @@ if (document.querySelector('.portfolio__item')) {
 
     // -- project -- //
     const project = document.querySelector('.project')
+    const projectItems = document.querySelectorAll('.project__item img');
+    const projectWrapper = document.querySelector('.project__wrapper')
     const projectAreaLeft = document.querySelector('.project__arrow-area-left')
     const projectAreaRight = document.querySelector('.project__arrow-area-right')
 
@@ -82,6 +93,11 @@ if (document.querySelector('.portfolio__item')) {
         burgerOpen.classList.toggle('active')
         burgerClose.classList.toggle('active')
         getHeightProject()
+        projectItems.forEach((item, i) => {
+            if(i < 4) {
+                item.classList.add('active')
+            }
+        })
     }
     // -- end portfolio -- //
 
@@ -184,6 +200,36 @@ if (document.querySelector('.portfolio__item')) {
     }
     // -- end change project  -- //
 
+    projectWrapper.addEventListener('scroll', function () {
+        projectItems.forEach(item => {
+            projectItemVisible(item);
+        })
+    });
 
+    const projectItemVisible = (target) => {
+        const targetPosition = {
+            top: window.pageYOffset + target.getBoundingClientRect().top,
+            bottom: window.pageYOffset + target.getBoundingClientRect().bottom
+        },
+
+            windowPosition = {
+                top: window.pageYOffset,
+                bottom: window.pageYOffset + document.documentElement.clientHeight
+            };
+
+        if (targetPosition.bottom > windowPosition.top &&
+            targetPosition.top < windowPosition.bottom) {
+            target.classList.add('active')
+        } else {
+            target.classList.remove('active')
+        }
+    };
 }
+
+
+
+
+
+
+
 
