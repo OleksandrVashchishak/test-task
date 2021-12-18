@@ -17,6 +17,61 @@ html {
     overflow-x: hidden;
 }
 
+
+
+.prelouder__logo {
+    animation-duration: 2s;
+    animation-name: prelouder-anim;
+    animation-timing-function: linear;
+}
+
+body.load-content .prelouder__wrapper {
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-name: prelouder-wrapper-anim;
+    animation-fill-mode: forwards;
+}
+
+body.load-content .header {
+    animation-delay: 1.5s;
+    animation-duration: 2s;
+    animation-name: header-prelouder;
+}
+
+body.load-content .portfolio__column {
+    animation-delay: 1.5s;
+    animation-duration: 2s;
+}
+body.load-content-late .prelouder__wrapper {
+    animation-duration: 4s;
+    animation-name: prelouder-wrapper-anim;
+    animation-fill-mode: forwards;
+}
+
+body.load-content-late .header {
+    animation-delay: .5s;
+    animation-duration: 2s;
+    animation-name: header-prelouder;
+}
+
+body.load-content-late .portfolio__column {
+    animation-delay: .5s;
+    animation-duration: 2s;
+}
+
+.portfolio__column:nth-child(1) {
+    animation-name: column-anim-1;
+}
+.portfolio__column:nth-child(2) {
+    animation-name: column-anim-2;
+}
+.portfolio__column:nth-child(3) {
+    animation-name: column-anim-3;
+}
+.portfolio__column:nth-child(4) {
+    animation-name: column-anim-4;
+}
+
 .container {
     max-width: 1860px;
     margin-left: auto;
@@ -306,10 +361,6 @@ body.black .header__logo path {
     height: 200vw;
     position: relative;
     transition: all 0.5s;
-    animation-duration: 4s;
-    animation-delay: 1s;
-    animation-name: prelouder-wrapper-anim;
-    animation-fill-mode: forwards;
     position: fixed;
     top: 0;
     right: 0;
@@ -322,34 +373,8 @@ body.black .header__logo path {
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     transition: all 0.5s;
-    animation-duration: 2s;
-    animation-name: prelouder-anim;
-    animation-timing-function: linear;
     opacity: 0;
     z-index: 11;
-}
-.header {
-    animation-delay: 1.5s;
-    animation-duration: 2s;
-    animation-name: header-prelouder;
-}
-
-.portfolio__column {
-    animation-delay: 1.5s;
-    animation-duration: 2s;
-}
-
-.portfolio__column:nth-child(1) {
-    animation-name: column-anim-1;
-}
-.portfolio__column:nth-child(2) {
-    animation-name: column-anim-2;
-}
-.portfolio__column:nth-child(3) {
-    animation-name: column-anim-3;
-}
-.portfolio__column:nth-child(4) {
-    animation-name: column-anim-4;
 }
 
 .about {
@@ -487,7 +512,7 @@ body.black .header__logo path {
 }
 
 .header__logo path {
-    transition: all .5s;
+    transition: all 0.5s;
 }
 
 .body-about .header__logo path {

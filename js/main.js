@@ -31,6 +31,21 @@ if (document.querySelector('.portfolio__item')) {
     const aboutImg = document.querySelector('.about__img-wrapper-side')
 
     // ---- FUNCTIONS ---- //
+
+    window.addEventListener("load", () => {
+        const loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
+        try {
+            if (loadTime > 1000) {
+                body.classList.add('load-content-late')
+            } else {
+                body.classList.add('load-content')
+            }
+        } catch {
+            body.classList.add('load-content')
+        }
+    });
+
+    // -- start portfolio -- //
     portfolioItems.forEach(item => {
         item.addEventListener('click', () => {
             overlay.classList.add('active')
@@ -55,6 +70,7 @@ if (document.querySelector('.portfolio__item')) {
         burgerClose.classList.toggle('active')
         getHeightProject()
     }
+    // -- end portfolio -- //
 
     // -- start about functions -- //
     burgerOpen.addEventListener('click', () => {
@@ -154,4 +170,7 @@ if (document.querySelector('.portfolio__item')) {
         projectAreaRight.style.height = wrapperActive.scrollHeight + 'px'
     }
     // -- end change project  -- //
+
+
 }
+
