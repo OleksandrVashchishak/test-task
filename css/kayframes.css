@@ -87,41 +87,7 @@
     }
 }
 
-/* // -- hover tail -- // */
 
-@keyframes hover-anim-enter {
-    0% {
-        width: 40px;
-        height: 40px;
-        opacity: 0;
-    }
-
-    100% {
-        width: 120px;
-        height: 120px;
-        opacity: 1;
-    }
-}
-
-@keyframes hover-anim-leave {
-    0% {
-        width: 120px;
-        height: 120px;
-        opacity: 1;
-    }
-
-    50% {
-        width: 140px;
-        height: 140px;
-        opacity: 1;
-    }
-
-    100% {
-        width: 40px;
-        height: 40px;
-        opacity: 0;
-    }
-}
 
 /* // -- about -- // */
 

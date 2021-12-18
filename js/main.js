@@ -32,19 +32,6 @@ if (document.querySelector('.portfolio__item')) {
 
     // ---- FUNCTIONS ---- //
     portfolioItems.forEach(item => {
-        item.addEventListener('mouseenter', () => {
-            item.classList.add('enter')
-            item.classList.remove('leave')
-        })
-
-        item.addEventListener('mouseleave', () => {
-            item.classList.remove('enter')
-            item.classList.add('leave')
-            setTimeout(() => {
-                item.classList.remove('leave')
-            }, 400)
-        })
-
         item.addEventListener('click', () => {
             overlay.classList.add('active')
             startOverlay.classList.add('active')
