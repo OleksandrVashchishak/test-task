@@ -1,11 +1,18 @@
-if (document.querySelector('.portfolio__item img')) {
-    const imagesParalax = document.querySelectorAll('.portfolio__item img');
-    new simpleParallax(imagesParalax, {
+if (document.querySelector('.portfolio__item')) {
+    const imagesParalax = document.querySelectorAll('.portfolio__item');
+    const paralaxClass = new simpleParallax(imagesParalax, {
         delay: 1.5,
         transition: 'cubic-bezier(0,0,0,1)',
-        overflow: true
+        overflow: true,
     });
+
+    setTimeout(() => {
+        paralaxClass.refresh();
+    }, 500)
 }
+
+
+
 
 if (document.querySelector('.portfolio__item')) {
 

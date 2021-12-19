@@ -230,7 +230,7 @@ body.load-content-late .portfolio__column {
 
 .portfolio__item {
     width: 100%;
-    margin-bottom: 32px;
+    margin-bottom: 16px;
     position: relative;
     cursor: pointer;
 }
