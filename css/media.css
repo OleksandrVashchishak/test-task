@@ -201,6 +201,10 @@
         border-radius: 100% 0 100% 100%;
     }
 
+    .project__arrow-area {
+        width: 30%;
+    }
+
     @keyframes prelouder-wrapper-anim {
         0% {
             width: 200vh;
@@ -253,6 +257,10 @@
     }
     .project__item-img {
         height: 250px;
+    }
+
+    .overlay-circle {
+        border: 100vh solid #ff3d00;
     }
 
     @keyframes overlay-anim {
