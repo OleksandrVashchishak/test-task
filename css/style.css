@@ -143,9 +143,10 @@ body.load-content-late .portfolio__column {
     align-items: center;
 }
 
+
 .header__social span {
-    padding-left: 4px;
-    padding-right: 4px;
+    padding-left: 3px;
+    padding-right: 3px;
 }
 
 .header__social span,
@@ -177,6 +178,7 @@ font-family: inherit;
 .header__contact a {
     position: relative;
     padding-left: 2px;
+    padding-right: 2px;
 }
 
 .header__social a:before,
