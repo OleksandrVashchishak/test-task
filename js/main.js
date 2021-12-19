@@ -200,7 +200,8 @@ if (document.querySelector('.portfolio__item')) {
             }, 500)
 
             // history.pushState({}, "project", "/")
-            history.replaceState(historyState, historyTitle, "/")
+            // history.replaceState(historyState, historyTitle, " ")
+            history.pushState(historyState, historyTitle, "?")
             console.log('replace1');
         }
 
