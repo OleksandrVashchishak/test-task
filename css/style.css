@@ -177,8 +177,8 @@ font-family: inherit;
 .header__social a,
 .header__contact a {
     position: relative;
-    padding-left: 2px;
-    padding-right: 2px;
+  margin-left: 2px;
+  margin-right: 2px;
 }
 
 .header__social a:before,
@@ -186,9 +186,9 @@ font-family: inherit;
     position: absolute;
     content: "";
     top: 0;
-    left: 0;
+    left: -2px;
     bottom: 0;
-    right: 0;
+    right: -2px;
     background: #ff3d00;
     width: 0;
     transition: all ease-in 0.3s;
@@ -197,7 +197,7 @@ font-family: inherit;
 
 .header__social a:hover:before,
 .header__contact a:hover:before {
-    padding-right: 100%;
+    padding-right: calc(100% + 4px);
 }
 
 .header__burger {

@@ -28,10 +28,6 @@
         width: calc(25% - 16px);
     }
 
-    /* .portfolio__item {
-        margin-bottom: 9px;
-    } */
-
     .project {
         padding-top: 130px;
     }
@@ -72,6 +68,54 @@
     .about__text p {
         margin-bottom: 0;
         margin-top: 10px;
+    }
+}
+
+@media (max-width: 1025px) {
+    @keyframes overlay-anim {
+        0% {
+            width: 0px;
+            height: 0px;
+            opacity: 0.4;
+        }
+
+        100% {
+            width: 180vw;
+            height: 180vw;
+            opacity: 1;
+        }
+    }
+
+    @keyframes prelouder-overlay-anim {
+        0% {
+            width: 0px;
+            height: 0px;
+            opacity: 1;
+        }
+
+        99% {
+            width: 180vw;
+            height: 180vw;
+            opacity: 0.5;
+        }
+
+        100% {
+            display: none;
+        }
+    }
+
+    @keyframes overlay-close-anim {
+        0% {
+            width: 180vw;
+            height: 180vw;
+            opacity: 1;
+        }
+
+        100% {
+            width: 0vw;
+            height: 0vw;
+            opacity: 0;
+        }
     }
 }
 
@@ -173,6 +217,52 @@
     .project__item-img {
         height: 250px;
     }
+
+    @keyframes overlay-anim {
+        0% {
+            width: 0px;
+            height: 0px;
+            opacity: 0.4;
+        }
+
+        100% {
+            width: 130vh;
+            height: 130vh;
+            opacity: 1;
+        }
+    }
+
+    @keyframes prelouder-overlay-anim {
+        0% {
+            width: 0px;
+            height: 0px;
+            opacity: 1;
+        }
+
+        99% {
+            width: 130vh;
+            height: 130vh;
+            opacity: 0.5;
+        }
+
+        100% {
+            display: none;
+        }
+    }
+
+    @keyframes overlay-close-anim {
+        0% {
+            width: 130vh;
+            height: 130vh;
+            opacity: 1;
+        }
+
+        100% {
+            width: 0vw;
+            height: 0vw;
+            opacity: 0;
+        }
+    }
 }
 
 @media (max-width: 430px) {
@@ -185,11 +275,9 @@
         height: 180px;
     }
 
-    .prelouder__logo svg{
-width: 300px;
+    .prelouder__logo svg {
+        width: 300px;
     }
-
-
 }
 
 @media (max-width: 350px) {
