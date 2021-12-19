@@ -696,3 +696,8 @@ body.black .header__logo path {
     right: 0px;
     cursor: url("../img/cursors/arrow-cursor-right.svg"), pointer;
 }
+
+
+.project__item {
+    opacity: 1 !important; 
+}

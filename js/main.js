@@ -124,10 +124,8 @@ if (document.querySelector('.portfolio__item')) {
         burgerOpen.classList.toggle('active')
         burgerClose.classList.toggle('active')
         getHeightProject()
-        projectItems.forEach((item, i) => {
-            if (i < 4) {
-                item.classList.add('active')
-            }
+        projectItems.forEach(item => {
+            projectItemVisible(item);
         })
     }
     // -- end portfolio -- //
