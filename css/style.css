@@ -702,11 +702,6 @@ body.black .header__logo path {
     cursor: url("../img/cursors/arrow-cursor-right.svg"), pointer;
 }
 
-
-.project__item {
-    opacity: 1 !important; 
-}
-
 .about__bottom {
 display: none;
 }
