@@ -143,6 +143,11 @@ body.load-content-late .portfolio__column {
     align-items: center;
 }
 
+.header__social span {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
 .header__social span,
 .header__social a {
     color: inherit;
