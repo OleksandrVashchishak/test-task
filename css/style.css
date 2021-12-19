@@ -172,6 +172,8 @@ font-family: inherit;
 
 .header__contact a {
     transition: all 0.5s;
+    display: block;
+    width: max-content;
 }
 
 .header__social a,
