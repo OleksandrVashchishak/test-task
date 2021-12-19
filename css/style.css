@@ -119,6 +119,7 @@ body.load-content-late .portfolio__column {
     justify-content: center;
 }
 
+.header__social span,
 .header__social a {
     color: inherit;
     font-weight: inherit;
@@ -135,11 +136,15 @@ body.load-content-late .portfolio__column {
     line-height: 16px;
     color: #000000;
     text-decoration: none;
+    /* transition: all 0.5s; */
+}
+
+.header__contact a {
+    transition: all 0.5s;
 }
 
 .header__social a,
 .header__contact a {
-    transition: all 0.5s;
     position: relative;
     padding-left: 2px;
 }
@@ -154,7 +159,7 @@ body.load-content-late .portfolio__column {
     right: 0;
     background: #ff3d00;
     width: 0;
-    transition: all ease-in 0.5s;
+    transition: all ease-in 0.3s;
     z-index: -1;
 }
 
@@ -294,7 +299,6 @@ body.load-content-late .portfolio__column {
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     border-radius: 100%;
-    border: 1px solid #ff3d00;
     z-index: 5;
 }
 
