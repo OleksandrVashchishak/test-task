@@ -28,9 +28,9 @@
         width: calc(25% - 16px);
     }
 
-    .portfolio__item {
-        /* margin-bottom: 9px; */
-    }
+    /* .portfolio__item {
+        margin-bottom: 9px;
+    } */
 
     .project {
         padding-top: 130px;
@@ -113,9 +113,14 @@
 }
 
 @media (max-width: 767px) {
-    .header {
-        display: none;
-    }
+  .header__social,
+  .header__contact {
+      display: none;
+  }
+
+  .portfolio {
+    padding-top: 90px;
+}
 
     .container {
         padding-left: 20px;
