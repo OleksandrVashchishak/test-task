@@ -2,6 +2,11 @@
 
 if (document.querySelector('.portfolio__item')) {
 
+    const historyTitle = 'project'
+    const historyState = { foo: "bar" }
+
+
+
     const projectUrl = window.location.href.split('?')
     if (projectUrl[projectUrl.length - 1] && projectUrl[projectUrl.length - 1] == 'american-hospital-tbilsi') {
         setTimeout(() => {
@@ -113,7 +118,7 @@ if (document.querySelector('.portfolio__item')) {
             e.preventDefault()
             const link = item.getAttribute('href')
             if (link) {
-                history.pushState({}, 'project', link);
+                history.pushState(historyState, historyTitle, link);
             }
             openProject()
         })
@@ -195,8 +200,8 @@ if (document.querySelector('.portfolio__item')) {
             }, 500)
 
             // history.pushState({}, "project", "/")
-            history.replaceState({}, "project", "/")
-            console.log('replace');
+            history.replaceState(historyState, historyTitle, "/")
+            console.log('replace1');
         }
 
         if (about.classList.contains('active')) {
