@@ -7,6 +7,23 @@
         url("../fonts/neue-haas-unica/neue-haas-unica-ight.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: "NeueHaasUnicaW06";
+    font-weight: bold;
+    font-style: normal;
+    src: url("../fonts/neue-haas-unica/neue-haas-unica-bold.ttf"),
+        url("../fonts/neue-haas-unica/neue-haas-unica-bold.woff2") format("woff2"),
+        url("../fonts/neue-haas-unica/neue-haas-unica-bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Helvetica;";
+    font-weight: bold;
+    font-style: normal;
+    src: url("../fonts/helvetica/Helvetica-Bold.ttf"),
+        url("../fonts/helvetica/Helvetica-Bold.ttf") format("truetype");
+}
+
 * {
     box-sizing: border-box;
     font-family: sans-serif;
@@ -119,6 +136,13 @@ body.load-content-late .portfolio__column {
     justify-content: center;
 }
 
+
+.header__social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .header__social span,
 .header__social a {
     color: inherit;
@@ -127,16 +151,17 @@ body.load-content-late .portfolio__column {
     color: inherit;
     transition: all 0.5s;
     text-decoration: none;
+font-family: inherit;
 }
 
 .header__social,
 .header__contact a {
+    font-family: Helvetica;
     font-weight: bold;
     font-size: 14px;
     line-height: 16px;
     color: #000000;
     text-decoration: none;
-    /* transition: all 0.5s; */
 }
 
 .header__contact a {
@@ -230,9 +255,8 @@ body.load-content-late .portfolio__column {
 
 .portfolio__item {
     width: 100%;
-    /* margin-bottom: 16px; */
-    padding-bottom: 12px;
-    padding-top: 12px;
+    padding-bottom: 6px;
+    padding-top: 6px;
     position: relative;
     cursor: pointer;
 }
@@ -253,8 +277,10 @@ body.load-content-late .portfolio__column {
 .portfolio__tooltipe-text {
     color: #fff;
     font-weight: 300;
-    font-size: 12px;
-    line-height: 150%;
+    font-family: Unica One;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.05em;
     position: absolute;
     top: 50%;
     text-transform: uppercase;
@@ -611,6 +637,7 @@ body.black .header__logo path {
 
 .project__title {
     margin: 0;
+    font-family: NeueHaasUnicaW06;
     font-weight: normal;
     font-size: 40px;
     line-height: 50px;
