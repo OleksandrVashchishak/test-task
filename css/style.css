@@ -696,11 +696,3 @@ body.black .header__logo path {
     right: 0px;
     cursor: url("../img/cursors/arrow-cursor-right.svg"), pointer;
 }
-
-
-.portfolio__column:nth-child(1) .portfolio__item:nth-child(1) {
-    margin-bottom: -20px;
-}
-.portfolio__column:nth-child(4) .portfolio__item:nth-child(2) {
-    margin-bottom: -15px;
-}
