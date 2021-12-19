@@ -1,16 +1,3 @@
-if (document.querySelector('.portfolio__item')) {
-    const imagesParalax = document.querySelectorAll('.portfolio__item');
-    const paralaxClass = new simpleParallax(imagesParalax, {
-        delay: 1.5,
-        transition: 'cubic-bezier(0,0,0,1)',
-        overflow: true,
-    });
-
-    setTimeout(() => {
-        paralaxClass.refresh();
-    }, 500)
-}
-
 
 
 
@@ -50,7 +37,31 @@ if (document.querySelector('.portfolio__item')) {
 
     // ---- FUNCTIONS ---- //
 
-    window.addEventListener("load", () => {
+    // -- start prelouder -- //
+    const loadingInterval = setInterval(() => {
+        if (onloadImages() < 3) {
+            loading()
+            clearInterval(loadingInterval);
+        }
+    }, 50);
+
+    const onloadImages = () => {
+        let counter = 0
+        const portfolioColumn = portfolio.querySelectorAll('.portfolio__column')
+        portfolioColumn.forEach(column => {
+            const images = column.querySelectorAll('.portfolio__img')
+            images.forEach((img, i) => {
+                if (i < 5) {
+                    if (img.height == 0 || img.width == 0) {
+                        counter++
+                    }
+                }
+            })
+        })
+        return counter
+    }
+
+    const loading = () => {
         const preloaderLogo = document.querySelector('.prelouder__logo')
         const loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
         try {
@@ -71,10 +82,23 @@ if (document.querySelector('.portfolio__item')) {
         } catch {
             body.classList.add('load-content')
         }
+    }
+    // -- end prelouder -- //
 
+    // -- start paralax -- //
+    if (document.querySelector('.portfolio__item')) {
+        const imagesParalax = document.querySelectorAll('.portfolio__item');
+        const paralaxClass = new simpleParallax(imagesParalax, {
+            delay: 1.5,
+            transition: 'cubic-bezier(0,0,0,1)',
+            overflow: true,
+        });
 
-
-    });
+        setTimeout(() => {
+            paralaxClass.refresh();
+        }, 500)
+    }
+    // -- end paralax -- //
 
     // -- start portfolio -- //
     portfolioItems.forEach(item => {
@@ -101,7 +125,7 @@ if (document.querySelector('.portfolio__item')) {
         burgerClose.classList.toggle('active')
         getHeightProject()
         projectItems.forEach((item, i) => {
-            if(i < 4) {
+            if (i < 4) {
                 item.classList.add('active')
             }
         })
