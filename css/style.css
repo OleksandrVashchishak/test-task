@@ -173,6 +173,7 @@ body.load-content-late .portfolio__column {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 40px;
 }
 
 .header__burger-open,
