@@ -1,7 +1,14 @@
 
 
-
 if (document.querySelector('.portfolio__item')) {
+
+    const projectUrl = window.location.href.split('?')
+    if (projectUrl[projectUrl.length - 1] && projectUrl[projectUrl.length - 1] == 'american-hospital-tbilsi') {
+        setTimeout(() => {
+            openProject()
+        }, 1)
+    }
+
 
     // ---- VARIABLES ---- //
     // -- general -- //
@@ -103,21 +110,30 @@ if (document.querySelector('.portfolio__item')) {
     // -- start portfolio -- //
     portfolioItems.forEach(item => {
         item.addEventListener('click', (e) => {
-            console.log(item);
             e.preventDefault()
-            overlay.classList.add('active')
-            startOverlay.classList.add('active')
-            html.style.overflow = 'hidden'
-            setTimeout(() => {
-                toggleProject()
-            }, 500)
-
-            setTimeout(() => {
-                overlay.classList.remove('active')
-                startOverlay.classList.remove('active')
-            }, 1500)
+            const link = item.getAttribute('href')
+            if (link) {
+                history.pushState({}, 'project', link);
+            }
+            openProject()
         })
     })
+
+    const openProject = () => {
+        overlay.classList.add('active')
+        startOverlay.classList.add('active')
+        html.style.overflow = 'hidden'
+        setTimeout(() => {
+            toggleProject()
+        }, 500)
+
+        setTimeout(() => {
+            overlay.classList.remove('active')
+            startOverlay.classList.remove('active')
+        }, 1500)
+
+
+    }
 
     const toggleProject = () => {
         portfolio.classList.toggle('hidden')
@@ -131,6 +147,7 @@ if (document.querySelector('.portfolio__item')) {
         })
     }
     // -- end portfolio -- //
+
 
     // -- start about functions -- //
     burgerOpen.addEventListener('click', () => {
@@ -176,6 +193,8 @@ if (document.querySelector('.portfolio__item')) {
             setTimeout(() => {
                 overlayClose.classList.remove('active')
             }, 500)
+
+            history.pushState({}, "project", "/")
         }
 
         if (about.classList.contains('active')) {
@@ -256,6 +275,9 @@ if (document.querySelector('.portfolio__item')) {
         }
     };
 }
+
+
+
 
 
 
