@@ -637,6 +637,10 @@ body.black .header__logo path {
     width: 0;
 }
 
+.project__copy {
+    display: none;
+}
+
 .project {
     padding-top: 170px;
     display: none;
