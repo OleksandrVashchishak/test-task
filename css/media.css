@@ -319,6 +319,87 @@
         font-size: 42px;
         line-height: 48px;
     }
+    .footer__logo {
+        display: none;
+    }
+
+    .footer__wrapper {
+        justify-content: flex-start;
+        padding-bottom: 40px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__copy {
+        max-width: none;
+    }
+
+    .footer__to-top {
+        padding-bottom: 25px;
+    }
+
+    .about__text p {
+        margin-top: 25px;
+    }
+
+    .about__contact,
+    .about__social,
+    .about__bottom {
+        display: flex;
+        align-items: center;
+    }
+
+    .about__social span {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    .about__contact a {
+        margin-left: 5px;
+        font-weight: bold;
+    }
+
+    .about__social a,
+    .about__social span {
+        font-weight: normal;
+    }
+
+    .about__contact a,
+    .about__social a,
+    .about__social span,
+    .about__bottom a {
+        color: #fff;
+        font-family: Helvetica;
+        font-style: normal;
+        font-size: 13px;
+        line-height: 16px;
+        text-decoration: none;
+        transition: all 0.9s;
+        opacity: 0;
+    }
+
+    .about.active .about__contact a,
+    .about.active .about__social a,
+    .about.active .about__social span,
+    .about.active .about__bottom a {
+        opacity: 1;
+    }
+
+    .about__bottom {
+        position: absolute;
+        bottom: 20px;
+        justify-content: space-between;
+        width: calc(100vw - 40px);
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+
+    .portfolio__column {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 }
 
 @media (max-width: 430px) {
@@ -335,15 +416,36 @@
     }
 }
 
-@media (max-width: 350px) {
-    .project__item-img {
-        height: 150px;
+@media (max-width: 400px) {
+    .about__bottom {
+        flex-wrap: wrap;
     }
 
-    .about__text p,
-    .about__text {
-        font-size: 18px;
-        line-height: 20px;
+    .about__social {
+        width: 50%;
+    }
+
+    .about__contact-center {
+        width: 50%;
+    }
+
+    .about__contact-right {
+        width: 100%;
+        margin-top: 6px;
+    }
+
+    .about__contact-right,
+    .about__contact-center {
+        justify-content: flex-end;
+    }
+
+    .about__contact-center a,
+    .about__contact-right a {
+        text-align: right;
+    }
+
+    .about__text p {
+        margin-top: 10px;
     }
 
     .about__wrapper {
@@ -353,5 +455,15 @@
     .about__title {
         font-size: 36px;
         line-height: 40px;
+    }
+
+    .project__item-img {
+        height: 150px;
+    }
+
+    .about__text p,
+    .about__text {
+        font-size: 18px;
+        line-height: 20px;
     }
 }

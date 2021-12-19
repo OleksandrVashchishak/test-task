@@ -102,7 +102,9 @@ if (document.querySelector('.portfolio__item')) {
 
     // -- start portfolio -- //
     portfolioItems.forEach(item => {
-        item.addEventListener('click', () => {
+        item.addEventListener('click', (e) => {
+            console.log(item);
+            e.preventDefault()
             overlay.classList.add('active')
             startOverlay.classList.add('active')
             html.style.overflow = 'hidden'
