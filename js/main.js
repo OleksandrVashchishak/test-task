@@ -199,10 +199,7 @@ if (document.querySelector('.portfolio__item')) {
                 overlayClose.classList.remove('active')
             }, 500)
 
-            // history.pushState({}, "project", "/")
-            // history.replaceState(historyState, historyTitle, " ")
             history.pushState(historyState, historyTitle, "?")
-            console.log('replace1');
         }
 
         if (about.classList.contains('active')) {
