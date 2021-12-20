@@ -705,3 +705,6 @@ body.black .header__logo path {
 .about__bottom {
 display: none;
 }
+.project__arrow-area svg {
+    display: none;
+}
