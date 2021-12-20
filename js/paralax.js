@@ -199,7 +199,6 @@ var cssTransform = function cssTransform() {
 // check if media is fully loaded
 var isImageLoaded = function isImageLoaded(media) {
   // if the media is a video, return true
-
   if (media.tagName.toLowerCase() !== 'img' && media.tagName.toLowerCase() !== 'picture') {
     return true;
   } // check if media is set as the parameter

@@ -20,8 +20,7 @@
     font-family: "Helvetica;";
     font-weight: bold;
     font-style: normal;
-    src: url("../fonts/helvetica/Helvetica-Bold.ttf"),
-        url("../fonts/helvetica/Helvetica-Bold.ttf") format("truetype");
+    src: url("../fonts/helvetica/Helvetica-Bold.ttf"), url("../fonts/helvetica/Helvetica-Bold.ttf") format("truetype");
 }
 
 * {
@@ -136,13 +135,11 @@ body.load-content-late .portfolio__column {
     justify-content: center;
 }
 
-
 .header__social {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 
 .header__social span {
     padding-left: 3px;
@@ -157,7 +154,7 @@ body.load-content-late .portfolio__column {
     color: inherit;
     transition: all 0.5s;
     text-decoration: none;
-font-family: inherit;
+    font-family: inherit;
 }
 
 .header__social,
@@ -179,8 +176,8 @@ font-family: inherit;
 .header__social a,
 .header__contact a {
     position: relative;
-  margin-left: 2px;
-  margin-right: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
 }
 
 .header__social a:before,
@@ -679,12 +676,9 @@ body.black .header__logo path {
     opacity: 0;
 }
 
-
 .project__arrow-area svg {
-    transition: all .3s ease-in;
+    transition: all 0.3s ease-in;
 }
-
-
 
 .project__arrow-area {
     position: absolute;
@@ -710,7 +704,7 @@ body.black .header__logo path {
 }
 
 .about__bottom {
-display: none;
+    display: none;
 }
 .project__arrow-area svg {
     display: none;
