@@ -679,6 +679,13 @@ body.black .header__logo path {
     opacity: 0;
 }
 
+
+.project__arrow-area svg {
+    transition: all .3s ease-in;
+}
+
+
+
 .project__arrow-area {
     position: absolute;
     z-index: 4;
