@@ -13,9 +13,21 @@ window.addEventListener('load', (event) => {
             setTimeout(() => {
                 paralaxClass.refresh();
             }, 500)
+
+
+document.querySelector('.testt').addEventListener('click', () => {
+    paralaxClass.refresh();
+    console.log(2);
+})
+
+
         }
+        
     }, 500)
 });
+
+
+
 
 // -- end paralax -- //
 
