@@ -15,7 +15,7 @@ window.addEventListener('load', (event) => {
             }, 500)
         }
         
-    }, 1500)
+    }, 2000)
 });
 
 
