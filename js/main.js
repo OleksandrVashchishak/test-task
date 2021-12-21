@@ -1,19 +1,20 @@
 // -- start paralax -- //
-console.log(1);
+console.log(12);
 window.addEventListener('load', (event) => {
-    console.log(2);
-    if (document.querySelector('.portfolio__item')) {
-        const imagesParalax = document.querySelectorAll('.portfolio__item');
-        const paralaxClass = new simpleParallax(imagesParalax, {
-            delay: 1.5,
-            transition: 'cubic-bezier(0,0,0,1)',
-            overflow: true,
-        });
+    setTimeout(() => {
+        if (document.querySelector('.portfolio__item')) {
+            const imagesParalax = document.querySelectorAll('.portfolio__item');
+            const paralaxClass = new simpleParallax(imagesParalax, {
+                delay: 1.5,
+                transition: 'cubic-bezier(0,0,0,1)',
+                overflow: true,
+            });
 
-        setTimeout(() => {
-            paralaxClass.refresh();
-        }, 500)
-    }
+            setTimeout(() => {
+                paralaxClass.refresh();
+            }, 500)
+        }
+    }, 500)
 });
 
 // -- end paralax -- //
