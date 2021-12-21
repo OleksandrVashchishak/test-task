@@ -1,4 +1,6 @@
-    // -- start paralax -- //
+// -- start paralax -- //
+
+window.addEventListener('load', (event) => {
     if (document.querySelector('.portfolio__item')) {
         const imagesParalax = document.querySelectorAll('.portfolio__item');
         const paralaxClass = new simpleParallax(imagesParalax, {
@@ -11,10 +13,12 @@
             paralaxClass.refresh();
         }, 500)
     }
-    // -- end paralax -- //
+});
 
-      // -- start burger close -- //
-  burgerClose.addEventListener('click', () => {
+// -- end paralax -- //
+
+// -- start burger close -- //
+burgerClose.addEventListener('click', () => {
     if (project.classList.contains('active')) {
         setTimeout(() => {
             toggleProject()
