@@ -1,6 +1,7 @@
 // -- start paralax -- //
-
+console.log(1);
 window.addEventListener('load', (event) => {
+    console.log(2);
     if (document.querySelector('.portfolio__item')) {
         const imagesParalax = document.querySelectorAll('.portfolio__item');
         const paralaxClass = new simpleParallax(imagesParalax, {
