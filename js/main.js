@@ -1,7 +1,7 @@
 // -- start paralax -- //
-console.log(12);
 window.addEventListener('load', (event) => {
     setTimeout(() => {
+        console.log('go');
         if (document.querySelector('.portfolio__item')) {
             const imagesParalax = document.querySelectorAll('.portfolio__item');
             const paralaxClass = new simpleParallax(imagesParalax, {
@@ -13,17 +13,9 @@ window.addEventListener('load', (event) => {
             setTimeout(() => {
                 paralaxClass.refresh();
             }, 500)
-
-
-document.querySelector('.testt').addEventListener('click', () => {
-    paralaxClass.refresh();
-    console.log(2);
-})
-
-
         }
         
-    }, 500)
+    }, 1500)
 });
 
 
